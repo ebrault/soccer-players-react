@@ -18,7 +18,7 @@ class IndexPlayers extends React.Component {
     this.setState({players: response.data.players})
   }
 
-  async deleteplayer(event, playerId) {
+  async deletePlayer(event, playerId) {
     event.preventDefault()
     await axios.delete(apiUrl + '/players/' + `${playerId}`, {headers: {'Authorization': `Token token=${this.state.user.token}`}})
     this.setState({players: this.state.players.filter(player => player.id !== playerId)})
