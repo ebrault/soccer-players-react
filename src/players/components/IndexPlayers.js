@@ -15,6 +15,7 @@ class IndexPlayers extends React.Component {
   }
   async componentDidMount() {
     const response = await axios.get(apiUrl + '/players', {headers: {'Authorization': `Token token=${this.state.user.token}`}})
+    console.log('player data', response.data.players)
     this.setState({players: response.data.players})
   }
 

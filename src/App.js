@@ -10,6 +10,7 @@ import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import IndexPlayers from './players/components/IndexPlayers'
 import CreatePlayer from './players/components/CreatePlayer'
+import UpdatePlayer from './players/components/UpdatePlayer'
 
 class App extends Component {
   constructor () {
@@ -61,6 +62,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/CreatePlayer' render={() => (
             <CreatePlayer flash={this.flash} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/players/:id/update' component={UpdatePlayer} render={() => (
+            <UpdatePlayer flash={this.flash} user={user} />
           )} />
         </main>
       </React.Fragment>
