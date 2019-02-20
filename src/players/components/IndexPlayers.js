@@ -1,5 +1,5 @@
 import React, { component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter, Redirect } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../apiConfig.js'
 import CreatePlayer from './CreatePlayer.js'
@@ -60,4 +60,4 @@ class IndexPlayers extends React.Component {
   }
 }
 
-export default IndexPlayers
+export default withRouter (IndexPlayers)

@@ -63,7 +63,7 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/CreatePlayer' render={() => (
             <CreatePlayer flash={this.flash} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/players/:id/update' component={UpdatePlayer} render={() => (
+          <AuthenticatedRoute user={user} path='/players/:id/update' render={() => (
             <UpdatePlayer flash={this.flash} user={user} />
           )} />
         </main>

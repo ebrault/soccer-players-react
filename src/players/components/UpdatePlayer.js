@@ -58,9 +58,7 @@ class UpdatePlayer extends React.Component {
   render() {
     const { id, user } = this.props
     const { player } = this.state
-    if(this.state.edited === true) {
-      return <Redirect to='/players'/>
-    }
+    console.log(this.state.player.edited)
     return(
       <React.Fragment>
         <div className="IndexPlayers">
